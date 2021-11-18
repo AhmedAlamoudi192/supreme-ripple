@@ -1,0 +1,28 @@
+@import-normalize;
+@tailwind base;
+@tailwind components;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@layer components {
+
+.fullscreen{
+    @apply flex flex-grow border border-current border-black m-auto h-full p-96 justify-center 
+}
+.ripple-button {
+  @apply rounded border-none m-8 px-10 py-5 bg-blue-600 text-white overflow-hidden relative cursor-pointer   
+}
+
+.ripple-button > .ripple {
+  @apply animate-ripple w-10 h-10 absolute bg-gray-500 block rounded-full opacity-100  
+}
+
+.ripple-button > .content {
+  @apply relative z-10
+}
+}
